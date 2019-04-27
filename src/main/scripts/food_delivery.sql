@@ -36,12 +36,12 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `food_delivery`.`order` (
   `id` INT NOT NULL,
-  `timestamp` TIMESTAMP(25) NULL,
+  `timestamp` TIMESTAMP(6) NULL,
   `price` DECIMAL(20) NULL,
   `status` VARCHAR(20) NULL,
   `user_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_order_user1_idx` (`user_id` ASC) VISIBLE,
+  INDEX `fk_order_user1_idx` (`user_id` ASC),
   CONSTRAINT `fk_order_user1`
     FOREIGN KEY (`user_id`)
     REFERENCES `food_delivery`.`user` (`id`)

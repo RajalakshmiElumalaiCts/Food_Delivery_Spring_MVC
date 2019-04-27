@@ -48,10 +48,7 @@
 				<td><form:button id="register" name="register">Register</form:button></td>
 			</tr>
 			<tr></tr>
-			<tr>
-				<td></td>
-				<td><a href="home.jsp">Home</a></td>
-			</tr>
+			
 		</table>
 	</form:form>
 

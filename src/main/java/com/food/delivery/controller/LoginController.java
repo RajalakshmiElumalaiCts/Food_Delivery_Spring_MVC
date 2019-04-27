@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.food.delivery.model.User;
 import com.food.delivery.service.UserService;
+import com.food.delivery.view.FoodMenu;
 import com.food.delivery.view.Login;
 
 @Controller
@@ -41,7 +42,7 @@ public class LoginController {
 	
 	    if (user != null) {
 	    	mav.setViewName("menu/food_menu"); 
-	      mav.addObject(Messages.getString("FIRSTNAME"), user.getFirstname()); 
+	      mav.addObject("foodMenu", new FoodMenu()); 
 	    } else {
 	    	mav.setViewName(Messages.getString("HOME_LOGIN")); 
 	    	mav.addObject(Messages.getString("MESSAGE"), Messages.getString("INVALID_USER")); 

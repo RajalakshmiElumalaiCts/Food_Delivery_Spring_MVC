@@ -10,7 +10,7 @@
 		<title>BURGER</title>
 	</head>
 	<body>
-		<form:form id="burgerForm" modelAttribute="foodItemObj" action="addBurgerToCart" method="get">
+		<form:form id="burgerForm" modelAttribute="burger" action="addBurgerToCart" method="get">
 				<table align="center">
 					<tr><td></td><td></td><td></td><td align="right"><h2>$10</h2></td></tr>
 					<tr> </tr>

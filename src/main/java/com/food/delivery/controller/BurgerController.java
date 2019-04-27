@@ -1,11 +1,7 @@
 package com.food.delivery.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,22 +11,26 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.food.delivery.model.FoodItem;
 import com.food.delivery.view.FoodCart;
+import com.food.delivery.view.FoodMenu;
 
 @Controller
 public class BurgerController {
 	
-	@RequestMapping(value = "addBurgerToCart", method = RequestMethod.GET)
-	public ModelAndView viewBurgerDescription(HttpServletRequest request, HttpServletResponse response, @ModelAttribute("foodObj") FoodItem burger) {
-		System.out.println("burger---------------->"+burger.getPrice());
+	@RequestMapping(value = "/addBurgerToCart", method = RequestMethod.GET)
+	public ModelAndView viewBurgerDescription(HttpServletRequest request, HttpServletResponse response,
+			 @ModelAttribute("burger") FoodItem burger) {
+		
+		FoodCart foodCart = (FoodCart) request.getSession().getAttribute("foodCart");
+		System.out.println("foodCart--------------------->>"+foodCart.getSelectedFood());
+		System.out.println("burger--------------------->>"+burger);
+		
 		ModelAndView model = new ModelAndView();
 		model.setViewName("menu/food_menu");
 		updateBurger(burger);
 		
-		FoodCart cart = new FoodCart();
-		List<FoodItem> selectedFood = new ArrayList<FoodItem>();
-		selectedFood.add(burger);
+		foodCart.getSelectedFood().add(burger);
 		
-		model.addObject("foodCart", selectedFood);
+		model.addObject("foodMenu", new FoodMenu());
 		return model;
 		
 	}

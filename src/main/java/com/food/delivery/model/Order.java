@@ -23,7 +23,7 @@ public class Order {
 	@Column
 	private Timestamp timestamp;
 	@Column
-	private float price;
+	private double price;
 	@Column
 	private String status;
 	
@@ -55,11 +55,11 @@ public class Order {
 		this.timestamp = timestamp;
 	}
 
-	public float getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(float price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 

@@ -6,7 +6,11 @@
 <html>
 
 	<head>
-		<style>
+		<link rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+			integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+			crossorigin="anonymous">
+<style>
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -24,49 +28,65 @@
 			}
 		</style>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Login</title>
+		<title>Food Menu</title>
 	</head>
 	<body>
-		<form:form id="loginForm" modelAttribute="login" action="viewFoodItem" method="get">
+		<form:form id="cart_form" modelAttribute="foodMenu" action="openCart" method="get">
+			<table>
+					<tr>
+						<td>
+							<form:button id="viewCart" name="viewCart"><i class="fa fa-cart-plus" aria-hidden="true"></i></form:button>
+						</td>
+					</tr>
+					<!-- <table align="center"> -->
+						<tr>
+							<td style="font-style: italic; color: red;">${emptyCart}</td>
+						</tr>
+					<!-- </table> -->
+				</table>
+		</form:form>
+	
+		<form:form id="food_menu" modelAttribute="foodMenu" action="viewFoodItem" method="get">
+			
 			<table align="center">
 				<tr>
-					<td><img src="${pageContext.request.contextPath}/resources/images/burger.jpg"></td>
-					<td align="left"><form:button value="burgerView" name="view">View</form:button></td>
-					<td><img src="${pageContext.request.contextPath}/resources/images/cake.jpg"></td>
-					<td align="left"><form:button value="cakeView" name="view">View</form:button></td>
-					<td><img src="${pageContext.request.contextPath}/resources/images/cheese-cake.jpg"></td>
-					<td align="left"><form:button value="cheeseCakeView" name="view">View</form:button></td>					
+					<td><img src="${pageContext.request.contextPath}/resources/images/burger.jpg" height="250" width="250" ></td>
+					<td align="left"><form:button id="burgerView" value="burgerView" name="burgerView">View</form:button></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/cake.jpg" height="250" width="250"></td>
+					<td align="left"><form:button id="cakeView" value="cakeView" name="view">View</form:button></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/cheese-cake.jpg" height="250" width="250"></td>
+					<td align="left"><form:button id="cheeseCakeView" value="cheeseCakeView" name="view">View</form:button></td>					
 				</tr>
 				<tr>
-					<td><img src="${pageContext.request.contextPath}/resources/images/chicken.jpg"></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/chicken.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="chickenView" name="view">View</form:button></td>
-					<td><img src="${pageContext.request.contextPath}/resources/images/choco-cake.png"></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/choco-cake.png" height="250" width="250"></td>
 					<td align="left"><form:button value="chocoCakeView" name="view">View</form:button></td>
-					<td><img src="${pageContext.request.contextPath}/resources/images/combo1.jpg"></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/combo1.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="combo1View" name="view">View</form:button></td>					
 				</tr>
 				<tr>
-					<td><img src="${pageContext.request.contextPath}/resources/images/combo2.jpg"></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/combo2.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="combo2View" name="view">View</form:button></td>
-					<td><img src="${pageContext.request.contextPath}/resources/images/pizza.jpg"></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/pizza.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="pizzaView" name="view">View</form:button></td>
-					<td><img src="${pageContext.request.contextPath}/resources/images/noodle2.jpg"></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/noodle2.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="noodle2View" name="view">View</form:button></td>					
 				</tr>
 				<tr>
-					<td><img src="${pageContext.request.contextPath}/resources/images/small-cake.jpg"></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/small-cake.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="smallCakeView" name="view">View</form:button></td>
-					<td>  <img src="${pageContext.request.contextPath}/resources/images/rice.jpg"></td>
+					<td>  <img src="${pageContext.request.contextPath}/resources/images/rice.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="riceView" name="view">View</form:button></td>
-					<td><img src="${pageContext.request.contextPath}/resources/images/vegroll.jpg"></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/vegroll.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="vegrollView" name="view">View</form:button></td>					
 				</tr>
 				<tr>
-					<td><img src="${pageContext.request.contextPath}/resources/images/noodle.jpg"></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/noodle.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="noodleView" name="view">View</form:button></td>
-					<td><img src="${pageContext.request.contextPath}/resources/images/veggies.jpg"></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/veggies.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="veggiesView" name="view">View</form:button></td>
-					<td><img src="${pageContext.request.contextPath}/resources/images/salad.jpg"></td>
+					<td><img src="${pageContext.request.contextPath}/resources/images/salad.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="saladView" name="view" >View</form:button></td>					
 				</tr>		
 				 
