@@ -17,7 +17,7 @@ import com.food.delivery.view.FoodMenu;
 public class BurgerController {
 	
 	@RequestMapping(value = "/addBurgerToCart", method = RequestMethod.GET)
-	public ModelAndView viewBurgerDescription(HttpServletRequest request, HttpServletResponse response,
+	public ModelAndView addBurgerToCart(HttpServletRequest request, HttpServletResponse response,
 			 @ModelAttribute("burger") FoodItem burger) {
 		
 		FoodCart foodCart = (FoodCart) request.getSession().getAttribute("foodCart");

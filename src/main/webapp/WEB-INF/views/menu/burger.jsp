@@ -9,6 +9,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>BURGER</title>
 	</head>
+	
+	<jsp:include page="../menu/app_background.jsp" />
+	
 	<body>
 		<form:form id="burgerForm" modelAttribute="burger" action="addBurgerToCart" method="get">
 				<table align="center">

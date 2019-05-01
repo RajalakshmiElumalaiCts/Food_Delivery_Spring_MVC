@@ -41,8 +41,9 @@ public class LoginController {
 	    User user = userService.login(login);
 	
 	    if (user != null) {
-	    	mav.setViewName("menu/food_menu"); 
-	      mav.addObject("foodMenu", new FoodMenu()); 
+	    	mav.setViewName("menu/food_menu"); 	    	
+	    	mav.addObject("foodMenu", new FoodMenu()); 
+	    	request.getSession().setAttribute("user", user);
 	    } else {
 	    	mav.setViewName(Messages.getString("HOME_LOGIN")); 
 	    	mav.addObject(Messages.getString("MESSAGE"), Messages.getString("INVALID_USER")); 

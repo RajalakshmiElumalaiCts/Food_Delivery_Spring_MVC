@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public void insertOrder(List<FoodItem> SelectedFood, Order order) {
 		
-		orderRepository.save(order);
+		//orderRepository.save(order);
 		foodRepository.saveAll(SelectedFood);
 		
 	}

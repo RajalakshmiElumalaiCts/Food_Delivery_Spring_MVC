@@ -10,16 +10,17 @@
 <title>Login</title>
 </head>
 
+<jsp:include page="../menu/app_background.jsp" />
 <body>
-
+	
 	<form:form id="loginForm" modelAttribute="login" action="login" method="get">
 		<table align="center">
 			<tr>
-				<td><form:label path="username">Username: </form:label></td>
+				<td><form:label path="username"><h2>Username:</h2> </form:label></td>
 				<td><form:input path="username" name="username" id="username" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="password">Password:</form:label></td>
+				<td><form:label path="password"><h2>Password:</h2></form:label></td>
 				<td><form:password path="password" name="password" id="password" /></td>
 			</tr>
 			<tr>

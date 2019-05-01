@@ -30,7 +30,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Food Menu</title>
 	</head>
-	<body>
+	<body background="${pageContext.request.contextPath}/resources/images/home_background.jpg">
+		<jsp:include page="../home/user_welcome.jsp" />
 		<form:form id="cart_form" modelAttribute="foodMenu" action="openCart" method="get">
 			<table>
 					<tr>

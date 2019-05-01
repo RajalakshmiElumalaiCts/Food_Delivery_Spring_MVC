@@ -6,17 +6,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Welcome</title>
 </head>
+<jsp:include page="../menu/app_background.jsp" />
 <body>
 	<table>
 		<tr>
-			<td>Welcome ${firstname}</td>
+			<td>Registration successful, ${firstname} !!!</td>
 		</tr>
 		<tr>
 		</tr>
 		<tr>
 		</tr>
 		<tr>
-			<td><a href="home.jsp">Home</a></td>
+			<td>
+			<a href="loadLogin"><h3>Login</h3></a>
+			<td>
+			<%-- <a href="${pageContext.request.contextPath}/views/home/login.jsp">Login</a> --%>
+			</td>
 		</tr>
 	</table>
 </body>

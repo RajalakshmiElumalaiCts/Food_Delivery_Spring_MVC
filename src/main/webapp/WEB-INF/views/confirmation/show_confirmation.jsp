@@ -6,6 +6,8 @@
 <meta charset="ISO-8859-1">
 <title>Confirmation</title>
 </head>
+<%-- <jsp:include page="../menu/app_background.jsp" /> --%>
+
 <body>
 	<table>
 		<tr><td></td><td></td><td><td></td><td></td><td><h4>ORDER CONFIRMATION</h4></td></tr>

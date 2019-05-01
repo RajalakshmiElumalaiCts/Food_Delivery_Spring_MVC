@@ -25,7 +25,7 @@ public class CartController {
 	UserService userService;
 	
 	@RequestMapping(value = "/placeOrder", method = RequestMethod.GET)
-	public ModelAndView viewCart(HttpServletRequest request, HttpServletResponse response) {
+	public ModelAndView placeOrder(HttpServletRequest request, HttpServletResponse response) {
 		
 		FoodCart foodCart = (FoodCart) request.getSession().getAttribute("foodCart");
 		Order order = createOrder(foodCart);

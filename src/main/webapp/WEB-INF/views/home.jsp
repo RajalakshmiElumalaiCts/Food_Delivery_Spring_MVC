@@ -6,11 +6,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Welcome</title>
 </head>
-<body>
+<body background="${pageContext.request.contextPath}/resources/images/home_background.jpg" >
 	<table align="center">
 		<tr>
-			<td><a href="loadLogin">Login</a></td>
-			<td><a href="loadRegister">Register</a></td>
+			<td><a href="loadLogin"><h3>Login</h3></a></td>
+		</tr>
+		<tr>
+			<td><a href="loadRegister"><h3>Register</h3></a></td>
 		</tr>
 	</table>
 </body>
