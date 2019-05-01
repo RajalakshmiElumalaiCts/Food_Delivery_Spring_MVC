@@ -26,8 +26,7 @@
 					 <td align="center"><form:button id="addToCart" name="addToCart">ADD TO CART</form:button></td> 
 					</tr>
 				</table>
-		</form:form>
-			
+		</form:form>			
 	
 	</body>
 </html>

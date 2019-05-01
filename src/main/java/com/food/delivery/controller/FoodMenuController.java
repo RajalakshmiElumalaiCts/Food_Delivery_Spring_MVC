@@ -32,6 +32,11 @@ public class FoodMenuController {
 	public ModelAndView viewFoodDescription(HttpServletRequest request, HttpServletResponse response,@ModelAttribute("foodMenu") FoodMenu foodMenu) {
 		
 		String chosenFood = request.getParameter("burgerView");
+		System.out.println("chosenFood------------------->1"+chosenFood);
+		if(chosenFood == null) {
+			System.out.println("here---------");
+			chosenFood = request.getParameter("chocoCakeView");
+		}
 		System.out.println("chosenFood------------------->"+chosenFood);
 		foodItem food = foodItem.valueOf(chosenFood);
 		
@@ -94,7 +99,7 @@ public class FoodMenuController {
 			break;
 		case chocoCakeView:
 			modelView.setViewName("menu/choco_cake");
-			modelView.addObject("choco_cake", foodObj);			
+			modelView.addObject("chocoCake", foodObj);			
 			break;
 		case combo1View:
 			modelView.setViewName("menu/combo1");

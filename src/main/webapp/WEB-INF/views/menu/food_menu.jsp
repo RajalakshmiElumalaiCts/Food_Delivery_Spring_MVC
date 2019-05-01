@@ -62,7 +62,7 @@
 					<td><img src="${pageContext.request.contextPath}/resources/images/chicken.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="chickenView" name="view">View</form:button></td>
 					<td><img src="${pageContext.request.contextPath}/resources/images/choco-cake.png" height="250" width="250"></td>
-					<td align="left"><form:button value="chocoCakeView" name="view">View</form:button></td>
+					<td align="left"><form:button value="chocoCakeView" name="chocoCakeView">View</form:button></td>
 					<td><img src="${pageContext.request.contextPath}/resources/images/combo1.jpg" height="250" width="250"></td>
 					<td align="left"><form:button value="combo1View" name="view">View</form:button></td>					
 				</tr>

@@ -8,6 +8,7 @@
 	<head>
 		<title>Insert title here</title>
 	</head>
+	<jsp:include page="../menu/app_background.jsp" />
 	<body>
 		<form:form id="view_cart_form" modelAttribute="foodCart" action="placeOrder" method="get">
 		 <table align="center">
